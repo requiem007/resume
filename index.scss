@@ -1,0 +1,29 @@
+// подключение шрифтов(добавляем в конце display=swap
+[class*="__container"] {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+  min-height: 100%;
+}
+body {
+  &.lock {
+    overflow: hidden;
+  }
+}
+@import "./icon__fonts/iconfonts.css";
+@import "./src/scss/fonts";
+@import "./src/scss/variables";
+@import "./src/scss/common.scss";
+@import "./src/scss/cancel";
+@import "./src/scss/mixins";
+
+@import "./src/components/header";
+@import "./src/components/main-section.scss";
+@import "./src/components/services.scss";
+@import "./src/components/portfolio.scss";
+@import "./src/components/career.scss";
+@import "./src/components/blog.scss";
+@import "./src/components/testimonials.scss";
+@import "./src/components/skills.scss";
+@import "./src/components/contacts.scss";
+@import "./src/components/footer.scss";
