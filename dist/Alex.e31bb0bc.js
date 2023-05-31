@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function () {
               error = formValidate(form);
               formData = new FormData(form);
               if (!(error === 0)) {
-                _context.next = 21;
+                _context.next = 22;
                 break;
               }
               form.classList.add("_sending");
@@ -261,17 +261,18 @@ document.addEventListener("DOMContentLoaded", function () {
               alert(result.massage);
               form.reset();
               form.classList.remove("_sending");
-              _context.next = 19;
+              _context.next = 20;
               break;
             case 17:
               alert("Ошибка!");
+              form.reset();
               form.classList.remove("_sending");
-            case 19:
-              _context.next = 22;
+            case 20:
+              _context.next = 23;
               break;
-            case 21:
-              alert("Заполните поле name и email!");
             case 22:
+              alert("Заполните поле name и email!");
+            case 23:
             case "end":
               return _context.stop();
           }
@@ -375,7 +376,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56329" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58977" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

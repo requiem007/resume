@@ -1,5 +1,6 @@
 .career {
   background-color: $secondary-bg;
+
   // .career__container
   &__container {
     display: flex;
@@ -7,11 +8,13 @@
     justify-content: center;
     padding-top: 80px;
     padding-bottom: 80px;
+
     @media (max-width: $mobile) {
       padding-top: 30px;
       padding-bottom: 30px;
     }
   }
+
   // career__body
   &__body {
     display: grid;
@@ -21,6 +24,7 @@
 
     @include adaptiveValue("row-gap", 80, 20, 1);
     @include adaptiveValue("column-gap", 144, 20, 1);
+
     @media (min-width: $mobile) {
       grid-auto-flow: column;
       align-content: center;
@@ -29,9 +33,10 @@
       grid-template-rows: auto 1fr;
     }
   }
+
   // .career__navigation
-  &__navigation {
-  }
+  &__navigation {}
+
   // .career__content
   &__content {
     @media (min-width: $mobile) {
@@ -40,9 +45,24 @@
     }
   }
 }
+
 .navigation-career {
-  // display: grid;
-  // gap: 9px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+
+
+  @media (max-width: $mobile) {
+    flex-direction: row;
+  }
+
+  @media (max-width: $small) {
+    flex-wrap: wrap;
+  }
+
   // .navigation-career__title
   &__title {
     display: block;
@@ -52,18 +72,25 @@
     line-height: 1.2;
     background-color: inherit;
     transition: all 0.2s ease 0s;
-    &:not(:last-child) {
-      margin-bottom: 9px;
+    border: $actionColor 1px solid;
+    border-radius: 5px;
+    margin: 10px;
+
+    @media (max-width: $mobile) {
+      padding: 14px;
+      width: 100%;
     }
+
     &:hover {
       color: $actionColor;
     }
+
     &.active {
       display: flex;
       justify-content: space-between;
       background-color: $white-bg;
-      border-radius: 4px;
       color: $actionColor;
+
       &::after {
         content: "\e900";
         font-family: Icons;
@@ -74,80 +101,97 @@
 }
 
 .content-career {
+
   // .content-career__body
   &__body {
     display: none;
+
     &.active {
       display: block;
     }
   }
+
   // .content-career__header
   &__header {
     padding-bottom: 32px;
     border-bottom: 1px solid #f1f1f1;
   }
+
   // .content-career__title
   &__title {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 500;
     font-size: 1.21em;
     line-height: 1.27;
+
     &:not(:last-child) {
       margin-bottom: 8px;
     }
   }
+
   // .content-career__link
   &__link {
+
     // .content-career__link_title
     &_title {
       color: inherit;
       text-decoration: underline;
       transition: color 0.3s ease 0s;
+
       &:hover {
         color: $actionColor;
       }
     }
   }
+
   // .content-career__location
   &__location {
     font-size: 0.87em;
     line-height: 1.21;
     color: $greyColor;
+
     &:not(:last-child) {
       margin-bottom: 16px;
     }
   }
+
   // .content-career__time
   &__time {
     font-weight: 500;
     font-size: 0.87em;
     line-height: 1.71;
     color: $greyColor;
+
     &:not(:last-child) {
       margin-bottom: 16px;
     }
   }
+
   // .content-career__categories
-  &__categories {
-  }
+  &__categories {}
+
   // .content-career__main
   &__main {
     padding-top: 32px;
   }
+
   // .content-career__list
-  &__list {
-  }
+  &__list {}
 }
+
 .list-content-career {
+
   // .list-content-career__item
   &__item {
     color: $greyColor;
     line-height: 1.2;
     position: relative;
     padding-left: 28px;
+
     &:not(:last-child) {
       margin-bottom: 16px;
     }
+
     &::before {
       content: "";
       width: 10px;
